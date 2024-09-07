@@ -1,0 +1,15 @@
+<section class="my-5">
+  <h2 class="text-main text-center">All Categories:</h2>
+  <div class="row g-3">
+      @for (category of categoryList; track category._id) {
+          <div class="col-md-3">
+              <div class="product p-2" [routerLink]="['/categoryDetails',category._id]">
+                  <div>
+                      <img [src]="category.image" class="w-100" height="350px" [alt]="category.name">
+                      <h3 class="text-main text-center">{{category.name}}</h3>
+                  </div>
+              </div>
+          </div>
+      }
+  </div>
+</section>
